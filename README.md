@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# Getting Started with Currency Conversion App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It uses [Material UI](https://mui.com/material-ui/) library to create components.
 
-## Available Scripts
+## Pre-requisites
+Install [nodejs](https://nodejs.org/en/download).
 
-In the project directory, you can run:
+## How to run
 
-### `npm start`
+In the project directory:
 
-Runs the app in the development mode.\
+1. Setup API key to get data from [ExchangeRate-API](https://www.exchangerate-api.com/). Create a `.env` file in the root and add:
+`REACT_APP_CURRENCY_API_KEY = "<your-api-key>"`
+
+2. Run `npm install` - Installs the required dependencies.
+3. Run `npm start` - Runs the app in the development mode.
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+4. `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## How to use
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Input any numerical value in the `Amount` field.
+2. Select currency in the `From` and `To` fields.
+3. Click `Convert` to view the results.
+4. You can view all your conversions in the `Previous Conversions` table.
+5. Click `Reset` to erase all inputs and results.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Future Improvements
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Improve decimal inputs format without losing precision. For instance, if user enters 8.999999999999999999 in the `amount` field. The amount in history table is displayed as 9.
+2. Display conversions in real time as user is editing.
+3. Currently, this app does not handle very large inputs efficiently, like 899999999999999999999.999999999999.
+3. Improve overall accessiblity of the application.
+4. Add country flags.
